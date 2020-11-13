@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Restoran</string>
+    <string name="nomor_meja">Nomor Meja</string>
+    <string name="nama_makanan">Nama Makanan</string>
+    <string name="harga">Harga</string>
+    <string name="_0">0</string>
+    <string name="hitung">Hitung</string>
+    <string name="jumlah">Jumlah</string>
+    <string name="total">Total</string>
+    <string name="grand_total">Grand Total</string>
+    <string name="kembali">Kembali</string>
+    <string name="silahkan_pilih_meja">Silahkan Pilih Meja</string>
+    <string name="meja_1">Meja 1</string>
+    <string name="meja_2">Meja 2</string>
+    <string name="meja_3">Meja 3</string>
+    <string name="meja_4">Meja 4</string>
+    <string name="kembali_ke_meja">Kembali Ke Meja</string>
+    <string name="kembali_ke_menu">Kembali ke Menu</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

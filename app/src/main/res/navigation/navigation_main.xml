@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation_main"
+    app:startDestination="@id/pilihMejaFragment">
+
+    <fragment
+        android:id="@+id/pilihMejaFragment"
+        android:name="com.example.android.restoran.PilihMejaFragment"
+        android:label="PilihMejaFragment" >
+        <action
+            android:id="@+id/action_pilihMejaFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.android.restoran.MenuFragment"
+        android:label="MenuFragment" >
+        <action
+            android:id="@+id/action_menuFragment_to_bayarFragment"
+            app:destination="@id/bayarFragment" />
+        <argument
+            android:name="nomorMeja"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/bayarFragment"
+        android:name="com.example.android.restoran.BayarFragment"
+        android:label="BayarFragment" >
+        <action
+            android:id="@+id/action_bayarFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+        <action
+            android:id="@+id/action_bayarFragment_to_pilihMejaFragment"
+            app:destination="@id/pilihMejaFragment" />
+        <argument
+            android:name="productSatu"
+            app:argType="com.example.android.restoran.Product" />
+        <argument
+            android:name="productDua"
+            app:argType="com.example.android.restoran.Product" />
+        <argument
+            android:name="productTiga"
+            app:argType="com.example.android.restoran.Product" />
+        <argument
+            android:name="nomorMeja"
+            app:argType="string" />
+        <argument
+            android:name="total"
+            app:argType="integer" />
+    </fragment>
+</navigation>

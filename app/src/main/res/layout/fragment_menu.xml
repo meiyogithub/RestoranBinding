@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="nomorMeja"
+            type="String" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="27dp">
+
+
+        <TextView
+            android:id="@+id/nomormeja"
+            android:layout_width="116dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/nomor_meja"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/namaMakanan1"
+            android:layout_width="145dp"
+            android:layout_height="57dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="48dp"
+            android:ems="10"
+            android:hint="@string/nama_makanan"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nomormeja" />
+
+        <EditText
+            android:id="@+id/hargaMakanan1"
+            android:layout_width="171dp"
+            android:layout_height="57dp"
+            android:layout_marginStart="145dp"
+            android:ems="10"
+            android:hint="@string/harga"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            app:layout_constraintBaseline_toBaselineOf="@+id/namaMakanan1"
+            app:layout_constraintStart_toStartOf="@+id/namaMakanan1" />
+
+        <EditText
+            android:id="@+id/jumlahMakanan1"
+            android:layout_width="58dp"
+            android:layout_height="57dp"
+            android:layout_marginEnd="5dp"
+            android:ems="10"
+            android:hint="@string/_0"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            app:layout_constraintBaseline_toBaselineOf="@+id/hargaMakanan1"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <EditText
+            android:id="@+id/namaMakanan2"
+            android:layout_width="145dp"
+            android:layout_height="57dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="@string/nama_makanan"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/namaMakanan1" />
+
+        <EditText
+            android:id="@+id/hargaMakanan2"
+            android:layout_width="171dp"
+            android:layout_height="57dp"
+            android:layout_marginStart="145dp"
+            android:ems="10"
+            android:hint="@string/harga"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            app:layout_constraintBaseline_toBaselineOf="@+id/namaMakanan2"
+            app:layout_constraintStart_toStartOf="@+id/namaMakanan2" />
+
+        <EditText
+            android:id="@+id/jumlahMakanan2"
+            android:layout_width="58dp"
+            android:layout_height="57dp"
+            android:layout_marginEnd="5dp"
+            android:ems="10"
+            android:hint="@string/_0"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            app:layout_constraintBaseline_toBaselineOf="@+id/hargaMakanan2"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <EditText
+            android:id="@+id/namaMakanan3"
+            android:layout_width="145dp"
+            android:layout_height="57dp"
+            android:layout_marginStart="16dp"
+            android:ems="10"
+            android:hint="@string/nama_makanan"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/namaMakanan2" />
+
+        <EditText
+            android:id="@+id/hargaMakanan3"
+            android:layout_width="171dp"
+            android:layout_height="57dp"
+            android:ems="10"
+            android:hint="@string/harga"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            app:layout_constraintBaseline_toBaselineOf="@+id/namaMakanan3"
+            app:layout_constraintStart_toEndOf="@+id/namaMakanan3" />
+
+        <EditText
+            android:id="@+id/jumlahMakanan3"
+            android:layout_width="58dp"
+            android:layout_height="57dp"
+            android:layout_marginEnd="5dp"
+            android:ems="10"
+            android:hint="@string/_0"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            app:layout_constraintBaseline_toBaselineOf="@+id/hargaMakanan3"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/hitungButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:onClick="hitung"
+            android:text="@string/hitung"
+            android:textColor="@color/Putih"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/namaMakanan3"
+            app:layout_constraintVertical_bias="0.135" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

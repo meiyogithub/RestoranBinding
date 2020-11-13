@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="product1"
+            type="com.example.android.restoran.Product" />
+
+        <variable
+            name="product2"
+            type="com.example.android.restoran.Product" />
+
+        <variable
+            name="product3"
+            type="com.example.android.restoran.Product" />
+
+        <variable
+            name="nomorMeja"
+            type="String" />
+
+        <variable
+            name="totalBayar"
+            type="Integer" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_bayar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="53dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TextView
+            android:id="@+id/nomormeja2"
+            android:layout_width="114dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="24dp"
+            android:text="@{nomorMeja}"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_harga3"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:background="@color/ungumuda"
+            android:text="@{String.valueOf(product3.hargaMenu)"
+            android:textAlignment="center"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_hargaMakanan3"
+            app:layout_constraintStart_toEndOf="@+id/tv_hargaMakanan3" />
+
+
+        <TextView
+            android:id="@+id/tv_jumlah3"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="14dp"
+            android:background="@color/ungumuda"
+            android:text="@{String.valueOf(product3.jumlahMenu)}"
+            android:textAlignment="center"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_harga3"
+            app:layout_constraintStart_toEndOf="@+id/tv_harga3" />
+
+
+
+
+
+        <TextView
+            android:id="@+id/tv_namaMakanan1"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="60dp"
+            android:background="@color/ungumuda"
+            android:text="@{String.valueOf(product1.jumlahMenu * product1.hargaMenu)}"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nomormeja2" />
+
+        <TextView
+            android:id="@+id/tv_harga1"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:background="@color/ungumuda"
+            android:text="@{String.valueOf(product1.hargaMenu)"
+            android:textAlignment="center"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_namaMakanan1"
+            app:layout_constraintStart_toEndOf="@+id/tv_namaMakanan1" />
+
+        <TextView
+            android:id="@+id/tv_jumlah1"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="14dp"
+            android:background="@color/ungumuda"
+            android:text="@{String.valueOf(product1.jumlahMenu)"
+            android:textAlignment="center"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_harga1"
+            app:layout_constraintStart_toEndOf="@+id/tv_harga1" />
+
+        <TextView
+            android:id="@+id/tv_total1"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:background="@color/ungumuda"
+            android:text='@{product1.subtotal != 0 ? String.valueOf(product1.subtotal) : ""}'
+            android:textAlignment="center"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_jumlah1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_jumlah1" />
+
+        <TextView
+            android:id="@+id/tv_namaMakanan2"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="26dp"
+            android:background="@color/ungumuda"
+            android:text="@{product1.namaMenu}"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_namaMakanan1" />
+
+        <TextView
+            android:id="@+id/tv_harga2"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:background="@color/ungumuda"
+            android:text="@{String.valueOf(product2.hargaMenu)"
+            android:textAlignment="center"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_namaMakanan2"
+            app:layout_constraintStart_toEndOf="@+id/tv_namaMakanan2" />
+
+        <TextView
+            android:id="@+id/tv_jumlah2"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="14dp"
+            android:background="@color/ungumuda"
+            android:text="@{String.valueOf(product2.jumlahMenu)"
+            android:textAlignment="center"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_harga2"
+            app:layout_constraintStart_toEndOf="@+id/tv_harga2" />
+
+        <TextView
+            android:id="@+id/tv_total2"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:background="@color/ungumuda"
+            android:text='@{product2.subtotal != 0 ? String.valueOf(product2.subtotal) : ""}'
+            android:textAlignment="center"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_jumlah2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_jumlah2" />
+
+        <TextView
+            android:id="@+id/tv_hargaMakanan3"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/ungumuda"
+            android:text="@{String.valueOf(product3.hargaMenu)"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_namaMakanan2" />
+
+        <TextView
+            android:id="@+id/tv_total3"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:background="@color/ungumuda"
+            android:text='@{product3.subtotal != 0 ? String.valueOf(product3.subtotal) : ""}'
+            android:textAlignment="center"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_jumlah3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_jumlah3" />
+
+        <TextView
+            android:id="@+id/tv_grandtotal"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="76dp"
+            android:text="@{String.valueOf(totalBayar)}"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_hargaMakanan3" />
+
+        <Button
+            android:id="@+id/buttonKembali1"
+            android:layout_width="136dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="116dp"
+            android:background="@drawable/button"
+            android:text="@string/kembali_ke_meja"
+            android:textColor="@color/Putih"
+            android:onClick="kembaliKeMeja"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_grandtotal"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/buttonKembali2"
+            android:layout_width="136dp"
+            android:layout_height="43dp"
+            android:layout_marginEnd="48dp"
+            android:onClick="kembaliKeMenu"
+            android:background="@drawable/button"
+            android:text="@string/kembali_ke_menu"
+            android:textColor="@color/Putih"
+            app:layout_constraintBaseline_toBaselineOf="@+id/buttonKembali1"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
